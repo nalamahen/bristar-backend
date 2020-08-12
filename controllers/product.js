@@ -145,7 +145,7 @@ exports.update = (req, res) => {
 };
 
 /**
- * sell / arrival
+ * sell / arrival / sale
  * by sell = /products?sortBy=sold&order=desc&limit=4
  * by arrival = /products?sortBy=createdAt&order=desc&limit=4
  * if no params are sent, then all products are returned
