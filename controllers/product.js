@@ -154,7 +154,7 @@ exports.update = (req, res) => {
 exports.list = (req, res) => {
   let order = req.query.order ? req.query.order : 'asc';
   let sortBy = req.query.sortBy ? req.query.sortBy : '_id';
-  let limit = req.query.limit ? parseInt(req.query.limit) : 6;
+  let limit = req.query.limit ? parseInt(req.query.limit) : 4;
 
   Product.find()
     .select('-photo')
@@ -220,8 +220,8 @@ exports.listBySearch = (req, res) => {
   let skip = parseInt(req.body.skip);
   let findArgs = {};
 
-  // console.log(order, sortBy, limit, skip, req.body.filters);
-  // console.log("findArgs", findArgs);
+  console.log(order, sortBy, limit, skip, req.body.filters);
+  console.log('findArgs', findArgs);
 
   for (let key in req.body.filters) {
     if (req.body.filters[key].length > 0) {
