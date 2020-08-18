@@ -36,11 +36,11 @@ exports.create = (req, res) => {
     // order.amount
 
     const emailData = {
-      to: 'mail2nalamahen@gmail.com',
-      from: 'noreply@ecommerce.com',
+      to: 'sales@bristar.be',
+      from: order.user.email,
       subject: `A new order is received`,
       html: `
-            <h1>Hey Admin, Somebody just made a purchase in your ecommerce store</h1>
+            <h1>Hey Admin, Somebody just made a purchase in your bristar Liquor Store</h1>
             <h2>Customer name: ${order.user.name}</h2>
             <h2>Customer address: ${order.address}</h2>
             <h2>User's purchase history: ${
@@ -73,7 +73,7 @@ exports.create = (req, res) => {
     // email to buyer
     const emailData2 = {
       to: order.user.email,
-      from: 'noreply@ecommerce.com',
+      from: 'sales@bristar.be',
       subject: `You order is in process`,
       html: `
         <h1>Hey ${req.profile.name}, Thank you for shopping with us.</h1>

@@ -103,6 +103,7 @@ exports.update = (req, res) => {
     // check for all fields
     const { name, description, price, category, quantity, shipping } = fields;
 
+    /*
     if (
       !name ||
       !description ||
@@ -115,6 +116,7 @@ exports.update = (req, res) => {
         error: 'All fields are required',
       });
     }
+    */
 
     let product = req.product;
     product = _.extend(product, fields);
