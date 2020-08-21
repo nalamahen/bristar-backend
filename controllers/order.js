@@ -40,7 +40,7 @@ exports.create = (req, res) => {
       from: order.user.email,
       subject: `A new order is received`,
       html: `
-            <h1>Hey Admin, Somebody just made a purchase in your bristar Liquor Store</h1>
+            <h1>Hey Admin, Somebody just made a purchase in your bristar Liqu store</h1>
             <h2>Customer name: ${order.user.name}</h2>
             <h2>Customer address: ${order.address}</h2>
             <h2>User's purchase history: ${
