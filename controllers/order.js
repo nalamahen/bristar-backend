@@ -2,7 +2,6 @@ const { Order } = require('../models/order');
 const { errorHandler } = require('../helpers/dbErrorHandler');
 // sendgrid for email npm i @sendgrid/mail
 const sgMail = require('@sendgrid/mail');
-const { replace } = require('lodash');
 sgMail.setApiKey(process.env.SENGRID_API_KEY);
 
 exports.orderById = (req, res, next, id) => {
@@ -57,7 +56,7 @@ exports.create = (req, res) => {
         <html xmlns="http://www.w3.org/1999/xhtml">
         <head>
           <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-          <title>Demystifying Email Design</title>
+          <title>Bristar Oline Liquor Store</title>
           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <style>
         table {
@@ -130,7 +129,7 @@ exports.create = (req, res) => {
         <html xmlns="http://www.w3.org/1999/xhtml">
         <head>
           <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-          <title>Demystifying Email Design</title>
+          <title>Bristar Online Liquor Store</title>
           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <style>
         table {
